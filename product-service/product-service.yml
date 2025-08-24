@@ -1,3 +1,12 @@
-logging:
-  level:
-    org.springframework: INFO
+spring:
+  application:
+    name: product-service
+  datasource:
+    url: ${PRODUCT_SERVICE_DB_URL}
+    username: ${PRODUCT_SERVICE_DB_USERNAME}
+    password: ${PRODUCT_SERVICE_DB_PASSWORD}
+  jpa:
+    ddl-auto: validate
+
+payment-service:
+  url: ${no_default_value_payment-service}
